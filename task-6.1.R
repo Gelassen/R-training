@@ -5,6 +5,11 @@
 install.packages("ggplot2", lib = "~/R/library")
 library(ggplot2)
 
+install.packages("curl", lib = "~/R/library")
+install.packages("openssl", lib = "~/R/library")
+install.packages("httr", lib = "~/R/library")
+install.packages("plotly", lib = "~/R/library")
+
 install.packages("plotly", lib = "~/R/library")
 library(plotly)
 
@@ -18,4 +23,11 @@ plot <- ggplot(data = mtcars, aes(x = hp, y = mpg)) +
   theme_minimal()  # Use a minimal theme
 
 # Convert to an interactive plotly plot
-ggplotly(plot)
+# ggplotly(plot)
+
+# Display the plot (use print in non-interactive sessions)
+print(ggplotly(plot))
+
+# Optionally, save the plot to a file
+htmlwidgets::saveWidget(ggplotly(plot), "scatter_plot.html", selfcontained = FALSE)
+ggsave("data/scatter_plot.png", plot)
