@@ -1,0 +1,51 @@
+---
+title: "My Report"
+author: "Your Name"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+# Introduction
+
+This is a simple report created using **RMarkdown**. Below is some R code that performs basic data analysis.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Data Analysis
+
+Let's start by loading the mtcars dataset and creating a scatter plot of mpg vs. hp.
+
+```r
+data(mtcars)
+summary(mtcars)
+
+library(ggplot2)
+ggplot(mtcars, aes(x = hp, y = mpg)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  labs(title = "Scatter Plot of MPG vs. HP",
+       x = "Horsepower (HP)",
+       y = "Miles per Gallon (MPG)") +
+  theme_minimal()
+
+```
+
+# Conclusion
+
+This report demonstrates how to use RMarkdown to generate a document that includes text, R code, and plots.
+
+
+### **Result**:
+- After knitting, you will have a document (HTML or PDF) that includes the text, R code, and the resulting plot.
+- If you specified `html_document` as the output format, you will get an HTML file. For `pdf_document`, you will get a PDF file.
+
+### **Notes**:
+- To knit to PDF, you need a LaTeX distribution installed on your system.
+- If you want to output to PDF but don't have LaTeX, you can use the **TinyTeX** distribution by running:
+
+  ```r
+  install.packages("tinytex")
+  tinytex::install_tinytex()
+

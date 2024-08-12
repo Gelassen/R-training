@@ -1,0 +1,52 @@
+---
+title: "Dynamic Report on Data"
+author: "Your Name"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Data Loading and Preprocessing
+
+In this section, we load the data and perform any necessary preprocessing steps.
+
+```{r load-data, echo=TRUE}
+# Load the data
+data <- read.csv("sample.csv")
+
+# Display the first few rows of the dataset
+head(data)
+```
+
+# Data Analysis
+
+Here, we perform some basic analysis on the data.
+
+```r
+# For example, calculate the mean of a numeric column
+mean_value <- mean(data$your_numeric_column, na.rm = TRUE)
+mean_value
+```
+
+# Visualization
+
+This section includes visualizations that automatically update when the data changes.
+
+```{r plot, echo=FALSE}
+library(ggplot2)
+
+
+
+# Generate a plot
+ggplot(data, aes(x = "Date", y = "Value")) +
+  geom_point() +
+  labs(title = "Scatter Plot of X vs Y")
+```
+
+# Conclusion
+
+This report dynamically updates based on the data in data/your_data.csv.
+
