@@ -1,0 +1,52 @@
+/* styles.css */
+
+/* Change the background color of the entire page */
+body {
+    background-color: #f0f8ff;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Style the title panel */
+  h2 {
+    color: #2e6da4;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* Customize the sidebar panel */
+  .sidebar {
+    background-color: #e7f0f8;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  /* Style the input controls */
+  select, input[type="range"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Customize the action buttons */
+  .btn {
+    background-color: #2e6da4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .btn:hover {
+    background-color: #1f5a7b;
+  }
+  
+  /* Customize the plot area */
+  #histPlot {
+    border: 2px solid #2e6da4;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
